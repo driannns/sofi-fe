@@ -11,6 +11,10 @@ import StudyProgramCreate from "./views/studyprograms/create";
 import StudyProgramEdit from "./views/studyprograms/edit";
 import StudyProgramShow from "./views/studyprograms/show";
 import StudyPrograms from "./views/studyprograms";
+import Peminatans from "./views/peminatans/Index";
+import PeminatansCreate from "./views/peminatans/Create";
+import PeminatansEdit from "./views/peminatans/Edit";
+import PeminatansShow from "./views/peminatans/Show";
 
 import SidangEdit from "./views/sidangs/Edit";
 import PowerPoint from "./views/sidangs/PowerPoint";
@@ -48,6 +52,10 @@ const router = (
       <Route path="/studyPrograms/create" element={<StudyProgramCreate />} />
       <Route path="/studyPrograms/:id/edit" element={<StudyProgramEdit/>} />
       <Route path="/studyPrograms/:id" element={<StudyProgramShow/>}/>
+      <Route path="/peminatans" element={<Peminatans/>} />
+      <Route path="/peminatans/create" element={<PeminatansCreate/>} />
+      <Route path="/peminatans/:id/edit" element={<PeminatansEdit/>} />
+      <Route path="/peminatans/:id" element={<PeminatansShow/>} />
     </Route>
 
     <Route path="*" element={<p>404 Error - Nothing here...</p>} />

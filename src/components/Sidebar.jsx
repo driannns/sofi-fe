@@ -584,14 +584,16 @@ const Sidebar = () => {
                       <span>Program Studi</span>
                     </NavLink>
                   </li>
-                  <li className="nav-item {{ Request::is('peminatans*') ? 'active' : '' }}">
-                    <a
-                      className="nav-link {{ Request::is('peminatans*') ? 'active' : '' }}"
-                      href="{{ route('peminatans.index') }}"
+                  <li className="nav-item">
+                    <NavLink
+                    to="/peminatans"
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active open" : "nav-link open"
+                    }
                     >
                       <i className="nav-icon icon-list"></i>
                       <span>Peminatan</span>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="nav-item {{ Request::is('verifyDocuments*') ? 'active' : '' }}">
                     <a
